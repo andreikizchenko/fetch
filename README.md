@@ -15,3 +15,5 @@ Add limitations to this file as per spec document
 Don't forget to `export PATH="~/RubymineProjects/test/fetch/bin:$PATH"` to `~/.zshrc`
 
 Testing direct push restriction
+
+Test 2
