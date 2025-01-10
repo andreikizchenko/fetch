@@ -12,33 +12,4 @@ In the event that multiple locations are returned by the API, you can use the fi
 
 Add limitations to this file as per spec document
 
-
-my_cli_app/
-├── bin/
-│   └── my_cli_app       # Main executable file
-├── lib/
-│   ├── my_cli_app/
-│   │   ├── version.rb   # Versioning information
-│   │   ├── cli.rb       # CLI logic and command definitions
-│   │   └── other_file.rb # Additional logic or helpers
-│   └── my_cli_app.rb    # Main entry point for the application
-├── spec/                # RSpec tests
-│   ├── my_cli_app/
-│   │   ├── cli_spec.rb  # Tests for the CLI logic
-│   │   └── other_spec.rb # Tests for other logic or helpers
-│   └── spec_helper.rb   # RSpec configuration
-├── Gemfile              # Dependency management
-├── Gemfile.lock         # Locked dependencies
-├── README.md            # Documentation for the project
-├── .gitignore           # Files and folders to ignore in Git
-└── my_cli_app.gemspec   # Optional: Defines the gemspec for the app
-
-./bin/fetch_cli foo greet Name Age - dockerize and remove the first part of the command
-
-add gitignore file and other git related files
-
-Remove greet command
-
-Remove test.rb file
-
-export PATH="/Users/andrei/RubymineProjects/test/fetch/bin:$PATH"
+Don't forget to `export PATH="~/RubymineProjects/test/fetch/bin:$PATH"` to `~/.zshrc`
