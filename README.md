@@ -13,3 +13,5 @@ In the event that multiple locations are returned by the API, you can use the fi
 Add limitations to this file as per spec document
 
 Don't forget to `export PATH="~/RubymineProjects/test/fetch/bin:$PATH"` to `~/.zshrc`
+
+Testing direct push restriction
