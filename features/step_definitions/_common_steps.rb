@@ -1,5 +1,5 @@
-When(/^I run terminal command (.+) with option (.+)$/) do |command, option|
-  @stdout, @stderr, @status = Open3.capture3("#{command} #{option}")
+When(/^I run terminal command (.+)$/) do |input|
+  @stdout, @stderr, @status = Open3.capture3(input)
   # p @stdout
   # p @stderr
   # p @status
@@ -23,4 +23,12 @@ end
 
 Then(/^exit status code is (\d)$/) do |digit|
   expect(@status.exitstatus).to eq(digit.to_i)
+end
+
+Then(/^error message text is "(.+)"$/) do |sting|
+  expect(@stderr).to eq(sting)
+end
+
+Then(/^help message is displayed$/) do
+  expect(@stderr).to start_with("Commands:\n")
 end
