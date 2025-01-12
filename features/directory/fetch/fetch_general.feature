@@ -1,14 +1,14 @@
-@general
-Feature: Testing fetch cli functionality. Non-existing option is used
+@fetch @general
+Feature: Testing fetch cli general functionality
 
-  Scenario: Verify application functions correctly when no option is used
+  Scenario: Verify cli application functions correctly without option
     When I run terminal command fetch
     Then output absent in terminal
     And error message present in terminal
     And exit status code is 1
     And help message is displayed
 
-  Scenario: Verify application functions correctly when non-existing option is used
+  Scenario: Verify cli application functions correctly with non-existing option
     When I run terminal command fetch --non-existing-option
     Then output absent in terminal
     And error message present in terminal
