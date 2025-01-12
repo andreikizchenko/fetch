@@ -9,7 +9,7 @@ Feature: Testing fetch cli functionality. Command 'fetch --locations [LOCATIONS]
 
   Scenario: Verify "fetch --locations 12345" command output correct
     When I run terminal command fetch --locations 12345
-    Then fetch locations output present in terminal
+    Then correct fetch locations single location output present in terminal
     And fetch locations output includes parameters Name, Lat, Lon, Country
     And fetch locations output includes value for each parameter
 
