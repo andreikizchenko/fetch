@@ -32,3 +32,15 @@ end
 Then(/^help message is displayed$/) do
   expect(@stderr).to start_with("Commands:\n")
 end
+
+Then(/^fetch locations output is correct$/) do
+  aggregate_failures 'output is correct' do
+    expect(@stdout).not_to be_empty
+    expect(@stderr).to be_empty
+    expect(@status.exitstatus).to eq(0)
+  end
+end
+
+Then(/^message text "(.+)" is displayed$/) do |string|
+  expect(@stdout.strip).to eq(string)
+end
