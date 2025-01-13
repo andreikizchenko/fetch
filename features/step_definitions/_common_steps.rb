@@ -1,8 +1,5 @@
 When(/^I run terminal command (.+)$/) do |input|
   @stdout, @stderr, @status = Open3.capture3(input)
-  # p @stdout
-  # p @stderr
-  # p @status
 end
 
 Then(/^output present in terminal$/) do

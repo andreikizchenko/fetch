@@ -1,4 +1,5 @@
 require 'cucumber'
+require 'json'
 require 'open3'
 require 'rspec/expectations'
 
