@@ -9,7 +9,7 @@ module API
         @params = { zip: zip_code }
       end
 
-      def info
+      def response
         client = API::Client.new(ENDPOINT, @params)
         response = client.request
         JSON.parse(response.body)
