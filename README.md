@@ -66,10 +66,10 @@ Since such tests are time consuming and can possibly hit an API rate limit, they
 from the list. These types of test are written for demo purposes, so similar tests may be written for locations name command if required.  
 
 ### Running Tests
-Just use standard cucumber commands:
-For the terminal output: `bundle exec cucumber --publish-quiet`
-To generate html report: `bundle exec cucumber --publish-quiet -f html -o cucumber_report.html`
-To run test for separate cli commands, tags can be used, Ex: `bundle exec cucumber --publish-quiet -t @locations`
+Just use standard cucumber commands:  
+For the terminal output: `bundle exec cucumber --publish-quiet`  
+To generate html report: `bundle exec cucumber --publish-quiet -f html -o cucumber_report.html`  
+To run test for separate cli commands, tags can be used, Ex: `bundle exec cucumber --publish-quiet -t @locations`  
 
 Don't hesitate to contact me for any setup hel or any additional comments!  
 Thank you for reviewing my work!
