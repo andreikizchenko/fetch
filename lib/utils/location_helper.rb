@@ -8,7 +8,7 @@ class LocationHelper
 
   def data
     data = zip_code? ? zip_code : name
-    (data.nil? || data.include?("404")) ? message_string : data_string(data)
+    data ? data_string(data) : message_string
   end
 
   private
@@ -18,13 +18,15 @@ class LocationHelper
   end
 
   def zip_code
-    API::Endpoint::ZipCode.new(@location).response
+    response = API::Endpoint::ZipCode.new(@location).response
+    response.values.include?("404") ? nil : response
   end
 
   def name
     city = @location.split(',').first
     state = @location.split(',').last
-    API::Endpoint::LocationName.new(city, state).response
+    response = API::Endpoint::LocationName.new(city, state).response
+    (response.nil? || response.include?("404")) ? nil : response
   end
 
   def message_string
