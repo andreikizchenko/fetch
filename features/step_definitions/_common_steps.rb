@@ -44,3 +44,7 @@ end
 Then(/^message text "(.+)" is displayed$/) do |string|
   expect(@stdout.strip).to eq(string)
 end
+
+Then(/^message text "(.+)" is not displayed$/) do |string|
+  expect(@stdout.strip).not_to eq(string)
+end
