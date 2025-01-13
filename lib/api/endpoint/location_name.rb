@@ -12,7 +12,7 @@ module API
         @params = { q: q, limit: LIMIT }
       end
 
-      def info
+      def response
         client = API::Client.new(ENDPOINT, @params)
         response = client.request
         JSON.parse(response.body).first
