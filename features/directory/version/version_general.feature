@@ -1,5 +1,5 @@
 @version @general
-Feature: Testing fetch cli general functionality of "fetch --version" command
+Feature: Testing fetch cli functionality. Command "fetch --version"
 
   Scenario: Verify "fetch --version" command output present
     When I run terminal command fetch --version

@@ -1,5 +1,5 @@
 @locations @options
-Feature: Testing fetch cli functionality. Command 'fetch --locations [LOCATIONS]"
+Feature: Testing fetch cli functionality. Command "fetch --locations [LOCATIONS]"
          Command options
 
   Scenario: Verify option "--locations" functions correctly

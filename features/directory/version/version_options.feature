@@ -1,5 +1,6 @@
 @version @options
-Feature: Testing fetch cli functionality of "fetch --version" command options
+Feature: Testing fetch cli functionality. Command "fetch --version"
+         Command options
 
   Scenario: Verify option "--version" functions correctly
     When I run terminal command fetch --version

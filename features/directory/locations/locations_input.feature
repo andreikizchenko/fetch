@@ -1,6 +1,6 @@
 @locations @input
 Feature: Testing fetch cli functionality of "fetch --locations [LOCATIONS]"
-         Command arguments input
+         Command argument input
 
   Scenario: Verify single argument input of location name functions correctly
     When I run terminal command fetch --locations "Washington, DC"

@@ -1,5 +1,5 @@
 @locations @general
-Feature: Testing fetch cli functionality. Command 'fetch --locations [LOCATIONS]"
+Feature: Testing fetch cli functionality. Command "fetch --locations [LOCATIONS]"
 
   Scenario: Verify "fetch --locations 12345" command output present
     When I run terminal command fetch --locations 12345
