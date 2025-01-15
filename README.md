@@ -13,13 +13,20 @@ As the second part of the assignment, automation test are developed using `cucum
 According to the requirements, I chose to use single repository for both utility and the test code.  
 
 ## Environment Setup
+### Local
 1. Make sure `ruby 2.7.6` installed on local machine
 2. Install bundler gem using terminal command `gem install bundler -v 2.1.4`
 3. Pull repository code to your local machine
 4. From the project root, run the terminal command `bundle` to install required gems
 5. Add bin path to your PATH in `~/.zshrc` file, Example: `export PATH="$HOME/RubymineProjects/fetch/bin:$PATH"`
 6. Run terminal command `source ~/.zshrc` to update your PATH variable
-7. Verify fetch app is working by running `fetch --version`
+7. Run the app or tests using the commands described in `Running Fetch CLI App` and `Running Tests` sections
+
+### Docker (preferred)
+1. Install docker
+2. Pull repository code to your local machine
+3. In terminal, from the project root, run script `./docker-local-app.sh`
+4. Run the app or tests using the commands described in Running app and Running tests sections
 
 ## Development
 ### General Info
@@ -34,7 +41,7 @@ Helper class which provides distribution between APIs and output format logic
 NOTE: Since this is not a production grade version, there are some hardcoded values  
 They definitely can be moved to the separate config profile and if sensitive to the secure storage   
 
-### Running Fetch CLI
+### Running Fetch CLI App
 To run cli use command `fetch`  
 For more details use `fetch --help`  
 Currently there are two commands supported: 
@@ -68,8 +75,10 @@ from the list. These types of test are written for demo purposes, so similar tes
 ### Running Tests
 Just use standard cucumber commands:  
 For the terminal output: `bundle exec cucumber --publish-quiet`  
-To generate html report: `bundle exec cucumber --publish-quiet -f html -o cucumber_report.html`  
+To generate html report: `bundle exec cucumber --publish-quiet -f html -o runs/cucumber_report.html`  
 To run test for separate cli commands, tags can be used, Ex: `bundle exec cucumber --publish-quiet -t @locations`  
+
+NOTE: Some of the test intentionally left in failing state to demonstrate error message output.
 
 Don't hesitate to contact me for any setup hel or any additional comments!  
 Thank you for reviewing my work!
